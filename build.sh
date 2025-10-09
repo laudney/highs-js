@@ -24,6 +24,7 @@ emcc -O3 \
 	-s EXPORTED_FUNCTIONS="@$root/exported_functions.json" \
 	-s EXPORTED_RUNTIME_METHODS="['cwrap']" \
 	-s MODULARIZE=1 \
+	-s EXPORT_ES6=1 \
 	-s ALLOW_MEMORY_GROWTH=1 \
 	-s STACK_SIZE=4194304 \
 	-flto \

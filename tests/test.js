@@ -1,7 +1,11 @@
-/** @type {import("../types").default} */
-const highs = require('../build/highs.js');
-const assert = require('assert').strict;
-const fs = require('fs');
+import highs from '../build/highs.js';
+import assert from 'assert/strict';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const PROBLEM = `Maximize
  obj: x1 + 2 x2 + 4 x3 + x4
@@ -81,7 +85,7 @@ const SOLUTION = {
     {
       Index: 2,
       Name: 'c3',
-      Status: 'UB',
+      Status: 'FX',
       Lower: 0,
       Upper: 0,
       Primal: 0,
